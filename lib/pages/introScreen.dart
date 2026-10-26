@@ -1,8 +1,10 @@
-// ignore_for_file: file_names
+
 import 'dart:async';
 
-import 'package:eagle/pages/anim.dart';
+
 import 'package:flutter/material.dart';
+
+import 'home.dart';
 
 class Introscreen extends StatefulWidget {
   const Introscreen({super.key});
@@ -13,27 +15,30 @@ class Introscreen extends StatefulWidget {
 
 class _IntroscreenState extends State<Introscreen> {
   @override
-  void initState(){
+  void initState() {
     super.initState();
-  Timer(Duration(seconds:2 ), (){
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Anim()));
-  });
- }
+    Timer(Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Home()),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.red,
-body:Center(
-  child: Container(
-    color: Colors.redAccent,
-    
-    child:Icon(Icons.blur_on_outlined,color: Colors.white,size: 52,) ,),
-)
-      )
+        backgroundColor: Colors.pink,
+        body: Center(
+          child: Container(
+            color: Colors.pinkAccent,
+
+            child: Icon(Icons.blur_on_outlined, color: Colors.white, size: 52),
+          ),
+        ),
+      ),
     );
   }
 }
-

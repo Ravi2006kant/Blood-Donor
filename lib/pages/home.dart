@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class May13 extends StatefulWidget {
-  const May13({super.key});
+class Home extends StatefulWidget {
+  const Home({super.key});
 
   @override
-  State<May13> createState() => _May13State();
+  State<Home> createState() => _May13State();
 }
 
-class _May13State extends State<May13> {
+class _May13State extends State<Home> {
   bool toogle = true;
   var ico = const Icon(Icons.pending, color: Colors.white);
   
@@ -109,8 +109,9 @@ class _May13State extends State<May13> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: const Center(
-          child: Text("Blood Need List", style: TextStyle(color: Colors.white)),
+          child: Text("Blood Need List", style: TextStyle(fontWeight: .bold,color: Colors.white)),
         ),
         backgroundColor: Colors.pink,
       ),
